@@ -18,6 +18,9 @@
 <body>
 
     <!-- Navigation menu -->
+    <?php
+        require_once('elements/navbar.php');
+    ?>
 
 
 </body>
