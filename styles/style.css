@@ -2,7 +2,103 @@
 +-------------------------------+
 |       Table of contents       |
 >-------------------------------<
-|  1.                           |
+|  1. General section           |
+|  2. Mixin, class etc.         |
+|  3. Navbar                    |
 >-------------------------------<
-*/
+
++------
+|  1. General Section
++------------*/
+* {
+  border: 0;
+  color: darkgray;
+  font-family: 'Oswald', Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0 !important;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*
++------
+|  2. Mixin, class etc.
++------------*/
+/*
++------
+|  3. Navbar
++------------*/
+header {
+  background: #1f1f1f;
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  width: 50px;
+  text-align: center;
+}
+
+header nav {
+  width: 100%;
+}
+
+header nav #side-menu div.icon {
+  padding-top: 15px !important;
+}
+
+header nav #side-menu div.icon:hover a .tooltip {
+  opacity: 1;
+  z-index: 1;
+  left: 60px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header nav #side-menu div.icon a {
+  position: relative;
+}
+
+header nav #side-menu div.icon a img {
+  -webkit-filter: invert(78%) sepia(1%) saturate(0%) hue-rotate(335deg) brightness(88%) contrast(86%);
+          filter: invert(78%) sepia(1%) saturate(0%) hue-rotate(335deg) brightness(88%) contrast(86%);
+  height: 35px;
+  width: 35px;
+}
+
+header nav #side-menu div.icon a span.tooltip {
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+  left: 0px;
+  min-width: 50px;
+  padding: 0 10px !important;
+  height: 25px;
+  line-height: 25px;
+  font-size: 14px;
+  text-align: center;
+  background: #1f1f1f;
+  border-radius: 0px 3.2px 3.2px 0px;
+  text-shadow: rgba(0, 0, 0, 0.6) 1px 1px 1px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header nav #side-menu div.icon a span.tooltip:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 12.5px;
+  border-style: solid;
+  border-color: transparent #1f1f1f transparent transparent;
+  left: -25px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
 /*# sourceMappingURL=style.css.map */
