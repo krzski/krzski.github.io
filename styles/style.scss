@@ -51,19 +51,19 @@ header {
         #side-menu {
 
             div {
+                &#logo {
+                    cursor: default;
+                    background-image: linear-gradient(to bottom right, #373b44, #4286f4);
+                    height: 58px;
+                    line-height: 58px;
+
+                    span {
+                        font-size: 28px;
+                    }
+                }
+                
                 &.icon {
                     padding-top: 15px !important;
-
-                    &:hover {
-                        a {
-                            .tooltip {
-                                opacity: 1;
-                                z-index: 1;
-                                left: 60px;
-                                transition: 0.5s;
-                            }
-                        }
-                    }
 
                     a {
                         position: relative;
@@ -72,6 +72,7 @@ header {
                             filter: invert(78%) sepia(1%) saturate(0%) hue-rotate(335deg) brightness(88%) contrast(86%);
                             height: 35px;
                             width: 35px;
+                            transition: 0.5s;
                         }
 
                         span {
@@ -103,6 +104,22 @@ header {
                                     transition: 0.8s;
                               }
                            }
+                        }
+                    }
+
+                    &:hover {
+                        a {
+                            img {
+                                filter: invert(63%) sepia(58%) saturate(6323%) hue-rotate(200deg) brightness(100%) contrast(92%);
+                                transition: 0.5s;
+                            }
+
+                            .tooltip {
+                                opacity: 1;
+                                z-index: 1;
+                                left: 60px;
+                                transition: 0.5s;
+                            }
                         }
                     }
                 }

@@ -48,16 +48,20 @@ header nav {
   width: 100%;
 }
 
-header nav #side-menu div.icon {
-  padding-top: 15px !important;
+header nav #side-menu div#logo {
+  cursor: default;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#373b44), to(#4286f4));
+  background-image: linear-gradient(to bottom right, #373b44, #4286f4);
+  height: 58px;
+  line-height: 58px;
 }
 
-header nav #side-menu div.icon:hover a .tooltip {
-  opacity: 1;
-  z-index: 1;
-  left: 60px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+header nav #side-menu div#logo span {
+  font-size: 28px;
+}
+
+header nav #side-menu div.icon {
+  padding-top: 15px !important;
 }
 
 header nav #side-menu div.icon a {
@@ -69,6 +73,8 @@ header nav #side-menu div.icon a img {
           filter: invert(78%) sepia(1%) saturate(0%) hue-rotate(335deg) brightness(88%) contrast(86%);
   height: 35px;
   width: 35px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 header nav #side-menu div.icon a span.tooltip {
@@ -100,5 +106,20 @@ header nav #side-menu div.icon a span.tooltip:after {
   left: -25px;
   -webkit-transition: 0.8s;
   transition: 0.8s;
+}
+
+header nav #side-menu div.icon:hover a img {
+  -webkit-filter: invert(63%) sepia(58%) saturate(6323%) hue-rotate(200deg) brightness(100%) contrast(92%);
+          filter: invert(63%) sepia(58%) saturate(6323%) hue-rotate(200deg) brightness(100%) contrast(92%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header nav #side-menu div.icon:hover a .tooltip {
+  opacity: 1;
+  z-index: 1;
+  left: 60px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 /*# sourceMappingURL=style.css.map */
