@@ -31,53 +31,31 @@ a {
 +------
 |  2. Mixin, class etc.
 +------------*/
-/*
-+------
-|  3. Navbar
-+------------*/
-header {
-  background: #1f1f1f;
-  position: fixed;
-  left: 0;
-  height: 100vh;
-  width: 50px;
-  text-align: center;
-}
-
-header nav {
-  width: 100%;
-}
-
-header nav #side-menu div#logo {
-  cursor: default;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#373b44), to(#4286f4));
-  background-image: linear-gradient(to bottom right, #373b44, #4286f4);
-  height: 58px;
-  line-height: 58px;
-}
-
-header nav #side-menu div#logo span {
-  font-size: 28px;
-}
-
-header nav #side-menu div.icon {
-  padding-top: 15px !important;
-}
-
-header nav #side-menu div.icon a {
-  position: relative;
-}
-
-header nav #side-menu div.icon a img {
+.img-icon {
   -webkit-filter: invert(78%) sepia(1%) saturate(0%) hue-rotate(335deg) brightness(88%) contrast(86%);
           filter: invert(78%) sepia(1%) saturate(0%) hue-rotate(335deg) brightness(88%) contrast(86%);
-  height: 35px;
-  width: 35px;
+  height: 30px;
+  width: 30px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-header nav #side-menu div.icon a span.tooltip {
+.icon:hover span.tooltip {
+  opacity: 1;
+  z-index: 1;
+  left: 60px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.icon:hover a img {
+  -webkit-filter: invert(63%) sepia(58%) saturate(6323%) hue-rotate(200deg) brightness(100%) contrast(92%);
+          filter: invert(63%) sepia(58%) saturate(6323%) hue-rotate(200deg) brightness(100%) contrast(92%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.tooltip {
   opacity: 0;
   z-index: -1;
   position: absolute;
@@ -95,7 +73,7 @@ header nav #side-menu div.icon a span.tooltip {
   transition: 0.5s;
 }
 
-header nav #side-menu div.icon a span.tooltip:after {
+.tooltip:after {
   content: "";
   position: absolute;
   width: 0;
@@ -108,18 +86,55 @@ header nav #side-menu div.icon a span.tooltip:after {
   transition: 0.8s;
 }
 
-header nav #side-menu div.icon:hover a img {
-  -webkit-filter: invert(63%) sepia(58%) saturate(6323%) hue-rotate(200deg) brightness(100%) contrast(92%);
-          filter: invert(63%) sepia(58%) saturate(6323%) hue-rotate(200deg) brightness(100%) contrast(92%);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+/*
++------
+|  3. Navbar
++------------*/
+header {
+  background: #1f1f1f;
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  width: 50px;
+  text-align: center;
 }
 
-header nav #side-menu div.icon:hover a .tooltip {
-  opacity: 1;
-  z-index: 1;
-  left: 60px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+header nav {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+header nav #up-side-menu div#logo {
+  cursor: default;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#373b44), to(#4286f4));
+  background-image: linear-gradient(to bottom right, #373b44, #4286f4);
+  height: 58px;
+  line-height: 58px;
+}
+
+header nav #up-side-menu div#logo span {
+  font-size: 28px;
+}
+
+header nav #up-side-menu div.icon {
+  padding-top: 15px !important;
+}
+
+header nav #up-side-menu div.icon a {
+  position: relative;
+}
+
+header nav #down-side-menu {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header nav #down-side-menu div {
+  padding-bottom: 15px !important;
 }
 /*# sourceMappingURL=style.css.map */
