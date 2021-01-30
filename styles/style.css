@@ -5,6 +5,7 @@
 |  1. General section           |
 |  2. Mixin, class etc.         |
 |  3. Navbar                    |
+|  4. Cards                     |
 >-------------------------------<
 
 +------
@@ -90,7 +91,14 @@ a {
 +------
 |  3. Navbar
 +------------*/
-header {
+#page {
+  /*
+    +------
+    |  4. Cards
+    +------------*/
+}
+
+#page header {
   background: #1f1f1f;
   position: fixed;
   left: 0;
@@ -99,13 +107,13 @@ header {
   text-align: center;
 }
 
-header nav {
+#page header nav {
   height: 100%;
   width: 100%;
   position: relative;
 }
 
-header nav #up-side-menu div#logo {
+#page header nav #up-side-menu div#logo {
   cursor: default;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#373b44), to(#4286f4));
   background-image: linear-gradient(to bottom right, #373b44, #4286f4);
@@ -113,19 +121,19 @@ header nav #up-side-menu div#logo {
   line-height: 58px;
 }
 
-header nav #up-side-menu div#logo span {
+#page header nav #up-side-menu div#logo span {
   font-size: 28px;
 }
 
-header nav #up-side-menu div.icon {
+#page header nav #up-side-menu div.icon {
   padding-top: 15px !important;
 }
 
-header nav #up-side-menu div.icon a {
+#page header nav #up-side-menu div.icon a {
   position: relative;
 }
 
-header nav #down-side-menu {
+#page header nav #down-side-menu {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -134,7 +142,29 @@ header nav #down-side-menu {
   margin-right: auto;
 }
 
-header nav #down-side-menu div {
+#page header nav #down-side-menu div {
   padding-bottom: 15px !important;
+}
+
+#page #cards {
+  margin-left: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+}
+
+#page #cards .card {
+  height: 100vh;
+}
+
+#page #cards .text {
+  background: linear-gradient(135deg, #080808 0, #585858 100%);
+  overflow-y: scroll;
+}
+
+#page #cards .photo img {
+  width: 100%;
+  height: 100%;
 }
 /*# sourceMappingURL=style.css.map */
