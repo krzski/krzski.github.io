@@ -1,16 +1,15 @@
-/*
-+-------------------------------+
-|       Table of contents       |
->-------------------------------<
-|  1. General section           |
-|  2. Mixin, class etc.         |
-|  3. Navbar                    |
-|  4. Cards                     |
->-------------------------------<
+// +-------------------------------+
+// |       Table of contents       |
+// >-------------------------------<
+// |  1. General section           |
+// |  2. Mixin, class etc.         |
+// |  3. Navbar                    |
+// |  4. Cards                     |
+// >-------------------------------<
 
-+------
-|  1. General Section
-+------------*/
+// +------
+// |  1. General Section
+// +------------
 * {
     border: 0;
     color: darkgray;
@@ -29,10 +28,10 @@ a {
 }
 
 
-/*
-+------
-|  2. Mixin, class etc.
-+------------*/
+
+// +------
+// |  2. Mixin, class etc.
+// +------------
 .img-icon {
     filter: invert(78%) sepia(1%) saturate(0%) hue-rotate(335deg) brightness(88%) contrast(86%);
     height: 30px;
@@ -87,10 +86,10 @@ a {
     }
 }
 
-/*
-+------
-|  3. Navbar
-+------------*/
+
+// +------
+// |  3. Navbar
+// +------------
 #page {
     header {
         background: #1f1f1f;
@@ -144,10 +143,9 @@ a {
         }
     }
 
-    /*
-    +------
-    |  4. Cards
-    +------------*/
+    // +------
+    // |  4. Cards
+    // +------------
 
     #cards {
         margin-left: 50px;
@@ -172,3 +170,4 @@ a {
         }
     }
 }
+
