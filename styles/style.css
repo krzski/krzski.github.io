@@ -24,6 +24,10 @@ a {
   transition: 0.5s;
 }
 
+.icon:hover {
+  cursor: pointer;
+}
+
 .icon:hover span.tooltip {
   opacity: 1;
   z-index: 1;
@@ -68,6 +72,20 @@ a {
   left: -25px;
   -webkit-transition: 0.8s;
   transition: 0.8s;
+}
+
+.card {
+  height: 100vh;
+}
+
+.text {
+  background: linear-gradient(135deg, #080808 0, #585858 100%);
+  overflow-y: scroll;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
 }
 
 #page header {
@@ -118,25 +136,17 @@ a {
   padding-bottom: 15px !important;
 }
 
-#page #cards {
+#page #cards-container .cards {
   margin-left: 50px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50% 50%;
       grid-template-columns: 50% 50%;
+  display: none;
 }
 
-#page #cards .card {
-  height: 100vh;
-}
-
-#page #cards .text {
-  background: linear-gradient(135deg, #080808 0, #585858 100%);
-  overflow-y: scroll;
-}
-
-#page #cards .photo img {
-  width: 100%;
-  height: 100%;
+#page #cards-container .cards.active {
+  -webkit-transition: 1s !important;
+  transition: 1s !important;
 }
 /*# sourceMappingURL=style.css.map */

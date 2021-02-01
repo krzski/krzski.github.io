@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/style.css">    
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <div id="page">
@@ -26,29 +26,29 @@
                         <span>K</span>
                     </div>
 
-                    <div class="icon">
-                        <a href="###">
+                    <div class="icon" onclick="cardSwitcher(1)">
+                        <a>
                             <img src="images/icons/person.svg" class="img-icon" alt="">
                             <span class="tooltip">About me</span>
                         </a>
                     </div>
 
-                    <div class="icon">
-                        <a href="">
+                    <div class="icon" onclick="cardSwitcher(2)">
+                        <a>
                             <img src="images/icons/resume.svg" class="img-icon" alt="">
                             <span class="tooltip">Resume</span>
                         </a>
                     </div>
                     
-                    <div class="icon">
-                        <a href="">
+                    <div class="icon" onclick="cardSwitcher(3)">
+                        <a>
                             <img src="images/icons/portfolio.svg" class="img-icon" alt="">
                             <span class="tooltip">Portfolio</span>
                         </a>
                     </div>
                     
-                    <div class="icon">
-                        <a href="">
+                    <div class="icon" onclick="cardSwitcher(4)">
+                        <a>
                             <img src="images/icons/contact.svg" class="img-icon" alt="">
                             <span class="tooltip" translate="yes">Contact</span>
                         </a>
@@ -73,15 +73,51 @@
         </header>
 
         <!-- Cards -->
-        <div id="cards">        
-            <div class="card text">
-
+        <div id="cards-container">
+            <div class="cards" id="about" style="display: grid;">
+                <div class="card text">
+                    About me
+                </div>
+    
+                <div class="card photo">
+                    <img src="images/photos/zdjecie.jpg" alt="" srcset="">
+                </div>
             </div>
 
-            <div class="card photo">
-                <img src="images/photos/zdjecie.jpg" alt="" srcset="">
+            <div class="cards" id="resume">
+                <div class="card text">
+                    Resume
+                </div>
+
+                <div class="card photo">
+                    <img src="images/photos/zdjecie.jpg" alt="" srcset="">
+                </div>
             </div>
+
+            <div class="cards" id="portfolio">
+                <div class="card text">
+                    Portfolio
+                </div>
+
+                <div class="card photo">
+                    <img src="images/photos/zdjecie.jpg" alt="" srcset="">
+                </div>
+            </div>
+
+            <div class="cards" id="contact">
+                <div class="card text">
+                    Contact
+                </div>
+
+                <div class="card photo">
+                    <img src="images/photos/zdjecie.jpg" alt="" srcset="">
+                </div>
+            </div>
+            
         </div>
     </div>
+
+    <!-- Scripts -->
+    <script src="scripts/script.js"></script>
 </body>
 </html>

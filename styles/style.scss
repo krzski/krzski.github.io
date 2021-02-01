@@ -40,6 +40,8 @@ a {
 }
 
 .icon:hover {
+    cursor: pointer;
+
     span {
         &.tooltip {
             opacity: 1;
@@ -86,6 +88,22 @@ a {
     }
 }
 
+.card {
+    height: 100vh;
+}
+
+.text {
+    background: linear-gradient(135deg, #080808 0, #585858 100%);
+    overflow-y: scroll;
+}
+
+.photo {
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
 
 // +------
 // |  3. Navbar
@@ -98,26 +116,26 @@ a {
         height: 100vh;
         width: 50px;
         text-align: center;
-    
+
         nav {
             height: 100%;
             width: 100%;
             position: relative;
-    
+
             #up-side-menu {
-    
+
                 div {
                     &#logo {
                         cursor: default;
                         background-image: linear-gradient(to bottom right, #373b44, #4286f4);
                         height: 58px;
                         line-height: 58px;
-    
+
                         span {
                             font-size: 28px;
                         }
                     }
-                    
+
                     &.icon {
                         padding-top: 15px !important;
     
@@ -127,7 +145,7 @@ a {
                     }
                 }
             }
-    
+
             #down-side-menu {
                 position: absolute;
                 bottom: 0;
@@ -135,7 +153,7 @@ a {
                 right: 0;
                 margin-left: auto;
                 margin-right: auto;
-    
+
                 div {
                     padding-bottom: 15px !important;
                 }
@@ -147,26 +165,12 @@ a {
     // |  4. Cards
     // +------------
 
-    #cards {
-        margin-left: 50px;
-        display: grid;
-        grid-template-columns: 50% 50%;
-
-        .card {
-            height: 100vh;
-        }
-
-        .text {
-            background: linear-gradient(135deg, #080808 0, #585858 100%);
-            overflow-y: scroll;
-        }
-
-        .photo {
-
-            img {
-                width: 100%;
-                height: 100%;
-            }
+    #cards-container {
+        .cards {
+            margin-left: 50px;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            display: none;
         }
     }
 }
