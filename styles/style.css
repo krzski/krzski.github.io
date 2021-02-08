@@ -145,8 +145,19 @@ a {
   display: none;
 }
 
-#page #cards-container .cards.active {
-  -webkit-transition: 1s !important;
-  transition: 1s !important;
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-clip: content-box;
+  border: 4px solid transparent;
+  border-radius: 7px;
+  -webkit-box-shadow: inset 0 0 0 10px;
+          box-shadow: inset 0 0 0 10px;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
 }
 /*# sourceMappingURL=style.css.map */
