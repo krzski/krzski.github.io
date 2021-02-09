@@ -146,12 +146,12 @@ a {
 }
 
 ::-webkit-scrollbar {
-  width: 14px;
+  width: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
   background-clip: content-box;
-  border: 4px solid transparent;
+  border: 5px solid transparent;
   border-radius: 7px;
   -webkit-box-shadow: inset 0 0 0 10px;
           box-shadow: inset 0 0 0 10px;

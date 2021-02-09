@@ -12,7 +12,6 @@ function cardSwitcher(id) {
 
     switch(id) {
         case 1:
-            about.classList += " active";
             about.style.display = "grid";
             break;
         case 2:
