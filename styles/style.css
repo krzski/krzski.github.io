@@ -19,6 +19,10 @@ a {
   text-decoration: none;
 }
 
+strong {
+  color: #4286f4;
+}
+
 .img-icon {
   -webkit-filter: invert(78%) sepia(1%) saturate(0%) hue-rotate(335deg) brightness(88%) contrast(86%);
           filter: invert(78%) sepia(1%) saturate(0%) hue-rotate(335deg) brightness(88%) contrast(86%);
@@ -151,11 +155,31 @@ a {
 #page #cards-container .cards {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
+  -ms-grid-columns: 50% auto;
+      grid-template-columns: 50% auto;
   margin-left: 50px;
   position: relative;
   z-index: -1;
+}
+
+#page #cards-container .cards .card-title {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(152, 152, 152, 0.25)), to(rgba(152, 152, 152, 0)));
+  background: linear-gradient(rgba(152, 152, 152, 0.25), rgba(152, 152, 152, 0));
+  -webkit-background-clip: text;
+  font-family: 'Roboto';
+  font-size: 110px;
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 30px;
+  -webkit-text-fill-color: transparent;
+}
+
+#page #cards-container #about .paragraph {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-top: -50px;
+  text-align: center;
 }
 
 ::-webkit-scrollbar {
