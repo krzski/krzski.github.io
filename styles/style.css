@@ -4,6 +4,11 @@
   font-family: 'Oswald', Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0 !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 body {
@@ -21,6 +26,10 @@ a {
 
 strong {
   color: #4286f4;
+}
+
+input:focus, textarea:focus {
+  outline: none;
 }
 
 .img-icon {
@@ -103,6 +112,35 @@ strong {
   height: 100%;
 }
 
+.row-2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+}
+
+.title-row {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 25px;
+}
+
+.elem {
+  border-radius: 25px;
+  background: rgba(128, 128, 128, 0.05);
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  min-height: 80px;
+  margin-top: 25px;
+  position: relative;
+}
+
+.small-icon {
+  height: 15px;
+  -webkit-filter: invert(63%) sepia(58%) saturate(6323%) hue-rotate(200deg) brightness(100%) contrast(92%);
+          filter: invert(63%) sepia(58%) saturate(6323%) hue-rotate(200deg) brightness(100%) contrast(92%);
+}
+
 #page header {
   background: #1f1f1f;
   position: fixed;
@@ -155,8 +193,8 @@ strong {
 #page #cards-container .cards {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 50% auto;
-      grid-template-columns: 50% auto;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
   margin-left: 50px;
   position: relative;
   z-index: -1;
@@ -180,6 +218,113 @@ strong {
   line-height: 1.5;
   margin-top: -50px;
   text-align: center;
+}
+
+#page #cards-container #contact .contact-container {
+  margin-top: -30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+}
+
+#page #cards-container #contact .contact-container .row-2 .col .elem {
+  width: 270px;
+}
+
+#page #cards-container #contact .contact-container .row-2 .col .elem .icon {
+  height: 40px;
+  max-width: 40px;
+  line-height: 40px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  left: 15px;
+  -webkit-filter: invert(63%) sepia(58%) saturate(6323%) hue-rotate(200deg) brightness(100%) contrast(92%);
+          filter: invert(63%) sepia(58%) saturate(6323%) hue-rotate(200deg) brightness(100%) contrast(92%);
+}
+
+#page #cards-container #contact .contact-container .row-2 .col .elem .contact-text {
+  padding-top: 15px !important;
+}
+
+#page #cards-container #contact .contact-container .row-2 .col .elem .contact-text p {
+  margin-left: 65px;
+  font-size: 18px;
+}
+
+#page #cards-container #contact .contact-container .row-2 .col .elem .contact-text a {
+  color: #808080;
+  margin-left: 65px;
+  font-size: 14px;
+}
+
+#page #cards-container #contact .contact-container .row-2 .col-r {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+#page #cards-container #contact .contact-form {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+}
+
+#page #cards-container #contact .contact-form .elem .row-2 .who-am-i {
+  background: transparent;
+  border-bottom: 2px solid #585858;
+  font-size: 18px;
+  margin-left: 40px;
+  margin-top: 30px;
+  width: 70%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#page #cards-container #contact .contact-form .elem .row-2 .who-am-i:focus {
+  border-bottom: 2px solid #909090;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#page #cards-container #contact .contact-form .elem textarea {
+  background: transparent;
+  border-bottom: 2px solid #585858;
+  font-size: 18px;
+  height: 50px;
+  line-height: 22px;
+  margin-left: 40px;
+  margin-top: 20px;
+  resize: vertical;
+  width: 85%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#page #cards-container #contact .contact-form .elem textarea:focus {
+  border-bottom: 2px solid #909090;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#page #cards-container #contact .contact-form .elem .submit {
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 40px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#page #cards-container #contact .contact-form .elem .submit:hover {
+  color: #f0f0f0;
+  margin-left: 55px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 ::-webkit-scrollbar {

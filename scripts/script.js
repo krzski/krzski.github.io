@@ -1,3 +1,4 @@
+// Switching cards and animations
 let cards = document.getElementsByClassName("cards");
 let card = document.getElementsByClassName("card");
 let about = document.getElementById("about");
@@ -59,11 +60,27 @@ function cardAnimate(text, photo, id) {
     for(let i=0; i<cards.length; i++) {
         if (i+1 != id) {
             cards[i].style.zIndex = "-1";
-        } 
-        if (i+1 == last) {
+        } else if (i+1 == last) {
             cards[last-1].style.zIndex = "0";
         }
     }
 
     last = id
 }
+
+// Contact card scripts
+const textarea = document.getElementById("textarea");
+let lastLength = 0;
+
+textarea.addEventListener('input', function (e) {
+    const target = e.target;
+    let length = target.value.length;
+
+    if (length % 70 == 0 && length > 0 && length > lastLength) {
+        lastLength = length
+        target.style.height = (25+target.scrollHeight)+"px";
+    } else if (length % 70 == 0 && length <= lastLength && target.offsetHeight != 52) {
+        lastLength = length
+        target.style.height = (-25+target.scrollHeight)+"px";
+    }
+});
