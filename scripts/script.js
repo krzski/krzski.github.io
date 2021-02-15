@@ -60,11 +60,12 @@ function cardAnimate(text, photo, id) {
     for(let i=0; i<cards.length; i++) {
         if (i+1 != id) {
             cards[i].style.zIndex = "-1";
-        } else if (i+1 == last) {
+        }
+        if (i+1 == last) {
             cards[last-1].style.zIndex = "0";
         }
     }
-
+    console.log(last);
     last = id
 }
 
@@ -76,10 +77,10 @@ textarea.addEventListener('input', function (e) {
     const target = e.target;
     let length = target.value.length;
 
-    if (length % 70 == 0 && length > 0 && length > lastLength) {
+    if (length % 65 == 0 && length > 0 && length > lastLength) {
         lastLength = length
         target.style.height = (25+target.scrollHeight)+"px";
-    } else if (length % 70 == 0 && length <= lastLength && target.offsetHeight != 52) {
+    } else if (length % 65 == 0 && length <= lastLength && target.offsetHeight != 52) {
         lastLength = length
         target.style.height = (-25+target.scrollHeight)+"px";
     }
