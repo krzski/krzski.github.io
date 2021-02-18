@@ -133,6 +133,7 @@ input:focus, textarea:focus {
   min-height: 80px;
   margin-top: 25px;
   position: relative;
+  width: 270px;
 }
 
 .small-icon {
@@ -233,12 +234,9 @@ input:focus, textarea:focus {
   text-align: center;
 }
 
-#page #cards-container #resume .resume-container .row-2 .col .elem {
-  width: 270px;
-}
-
 #page #cards-container #resume .resume-container .row-2 .col .elem div {
   margin-left: 22.5px;
+  margin-right: 22.5px;
 }
 
 #page #cards-container #resume .resume-container .row-2 .col .elem div p {
@@ -269,7 +267,6 @@ input:focus, textarea:focus {
 }
 
 #page #cards-container #resume .skills-container .row-2 .col .elem {
-  width: 270px;
   padding-bottom: 20px !important;
 }
 
@@ -300,8 +297,82 @@ input:focus, textarea:focus {
   padding: 0;
 }
 
-#page #cards-container #contact .contact-container .row-2 .col .elem {
-  width: 270px;
+#page #cards-container #portfolio .portfolio-container .elem {
+  margin-top: 40px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#page #cards-container #portfolio .portfolio-container .elem:nth-child(1) {
+  margin-top: 20px;
+}
+
+#page #cards-container #portfolio .portfolio-container .elem .img {
+  overflow: hidden;
+  border-radius: 25px 25px 0 0;
+  position: relative;
+}
+
+#page #cards-container #portfolio .portfolio-container .elem .img img {
+  width: 100%;
+  max-height: 100% !important;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#page #cards-container #portfolio .portfolio-container .elem .img .img-color {
+  background: #4286f4;
+  display: block;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#page #cards-container #portfolio .portfolio-container .elem .info {
+  margin-left: 22.5px;
+  margin-right: 22.5px;
+  padding-bottom: 15px !important;
+  text-align: center;
+}
+
+#page #cards-container #portfolio .portfolio-container .elem .info p {
+  color: white;
+  font-size: 18px;
+}
+
+#page #cards-container #portfolio .portfolio-container .elem .info a {
+  color: #909090;
+  font-size: 12px;
+}
+
+#page #cards-container #portfolio .portfolio-container .elem:hover {
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#page #cards-container #portfolio .portfolio-container .elem:hover .img img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#page #cards-container #portfolio .portfolio-container .elem:hover .img .img-color {
+  background: #4286f4;
+  opacity: 0.5;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 #page #cards-container #contact .contact-container .row-2 .col .elem .icon {
@@ -333,11 +404,29 @@ input:focus, textarea:focus {
   font-size: 14px;
 }
 
+#page #cards-container #contact .contact-container .row-2 .col .contact-elem {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#page #cards-container #contact .contact-container .row-2 .col .contact-elem:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 #page #cards-container #contact .contact-form {
   width: 85%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 40px;
+}
+
+#page #cards-container #contact .contact-form .elem {
+  width: 100%;
 }
 
 #page #cards-container #contact .contact-form .elem .row-2 .who-am-i {

@@ -148,7 +148,7 @@
                                         </li>
                                         <li>
                                             <div class="progress">
-                                                <a>HTML / CSS</a>
+                                                <a>HTML / CSS / JS</a>
                                                 <div class="progressbar">
                                                     <div class="fill" style="width: 85%;"></div>
                                                 </div>
@@ -159,6 +159,14 @@
                                                 <a>MySQL / MySQLi / MongoDB</a>
                                                 <div class="progressbar">
                                                     <div class="fill" style="width: 70%;"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="progress">
+                                                <a>Microcontrollers</a>
+                                                <div class="progressbar">
+                                                    <div class="fill" style="width: 40%;"></div>
                                                 </div>
                                             </div>
                                         </li>
@@ -217,9 +225,45 @@
                 </div>
             </div>
 
-            <div class="cards" id="portfolio">
+            <div class="cards" id="portfolio" style="z-index: 100;">
                 <div class="card text">
                     <h1 class="card-title">PORTFOLIO</h1>
+
+                    <div class="portfolio-container container">
+                        <div class="title-row">
+                            <p><strong>My</strong> portfolio</p>
+                        </div>
+
+                        <div class="row-2">
+                            <div class="col col-l">
+                                <div class="elem" id="management">
+                                    <div class="img">
+                                        <img src="images/photos/tasklist.png" alt="">
+                                        <span class="img-color"></span>
+                                    </div>
+
+                                    <div class="info">
+                                        <p>Task management application</p>
+                                        <a>Web application</a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col col-r">
+                                <div class="elem" id="ciri" onclick="window.open('http://ciri.ct8.pl/blog', '_blank')">
+                                    <div class="img">
+                                        <img src="images/photos/obroza.jpg" alt="">
+                                        <span class="img-color"></span>
+                                    </div>
+
+                                    <div class="info">
+                                        <p>Project "CIRI"</p>
+                                        <a>Project based on microcontrollers - Redirect to another domain, only in Polish.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="card photo">
@@ -237,7 +281,7 @@
                         </div>
                         <div class="row-2">
                             <div class="col col-l">
-                                <div class="elem">
+                                <div class="elem" id="addres">
                                     <img src="images/icons/gps.svg" class="icon" alt="">
                                     <div class="contact-text">
                                         <p>Addres</p>
@@ -245,7 +289,7 @@
                                     </div>
                                 </div>
 
-                                <div class="elem">
+                                <div class="elem contact-elem" onclick="location.href = 'https://discordapp.com/users/359297842059149314/'">
                                     <img src="images/icons/discord.svg" class="icon" alt="">
                                     <div class="contact-text">
                                         <p>fkrzski</p>
@@ -254,8 +298,9 @@
                                 </div>
                             </div>
 
+
                             <div class="col col-r">
-                                <div class="elem">
+                                <div class="elem contact-elem" onclick="location.href = 'mailto:filip.krzyzanowski@protonmail.com'">
                                     <img src="images/icons/email.svg" class="icon" alt="">
                                     <div class="contact-text">
                                         <p>E-mail</p>

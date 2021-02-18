@@ -149,6 +149,7 @@ input:focus, textarea:focus {
     min-height: 80px;
     margin-top: 25px;
     position: relative;
+    width: 270px;
 }
 
 .small-icon {
@@ -271,11 +272,9 @@ input:focus, textarea:focus {
                 .row-2 {
                     .col {
                         .elem {
-                            width: 270px;
-
                             div {
                                 margin-left: 22.5px;
-                                
+                                margin-right: 22.5px;
 
                                 p {
                                     color: white;
@@ -311,7 +310,6 @@ input:focus, textarea:focus {
                 .row-2 {
                     .col {
                         .elem {
-                            width: 270px;
                             padding-bottom: 20px !important;
 
                             .skill {
@@ -351,6 +349,80 @@ input:focus, textarea:focus {
         // +------
         // |  7. Portfolio card
         // +------------
+        #portfolio {
+            .portfolio-container {
+                .elem {
+                    margin-top: 40px;
+                    transition: 0.5s;
+
+                    &:nth-child(1) {
+                        margin-top: 20px;
+                    }
+
+                    .img {
+                        overflow: hidden;
+                        border-radius: 25px 25px 0 0;
+                        position: relative;
+
+                        img {
+                            width: 100%;
+                            max-height: 100% !important;
+                            transition: 0.5s;
+                        }
+
+                        .img-color {
+                            background: rgb(66, 134, 244);
+                            display: block;
+                            opacity: 0;
+                            height: 100%;
+                            width: 100%;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            transition: 0.5s;
+                        }
+                    }
+                    
+                    .info {
+                        margin-left: 22.5px;
+                        margin-right: 22.5px;
+                        padding-bottom: 15px !important;
+                        text-align: center;
+
+                        p {
+                            color: white;
+                            font-size: 18px;
+                        }
+
+                        a {
+                            color: #909090;
+                            font-size: 12px;
+                        }
+                    }
+
+                    &:hover {
+                        background: rgba(255, 255, 255, 0.05);
+                        box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+                        cursor: pointer;
+                        transition: 0.5s;
+
+                        .img {
+                            img {
+                                transform: scale(1.1);
+                                transform-origin: center;
+                                transition: 0.5s;
+                            }
+
+                            .img-color {
+                                background: rgb(66, 134, 244);
+                                opacity: 0.5;
+                                transition: 0.5s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
         // +------
         // |  8. Contact card
@@ -360,8 +432,6 @@ input:focus, textarea:focus {
                 .row-2 {
                     .col {
                         .elem {
-                            width: 270px;
-
                             .icon {
                                 height: 40px;
                                 max-width: 40px;
@@ -389,7 +459,17 @@ input:focus, textarea:focus {
                                     font-size: 14px;
                                 }
                             }
-                            
+                        }
+
+                        .contact-elem {
+                            transition: 0.5s;
+
+                            &:hover {
+                                cursor: pointer;
+                                box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+                                background: rgba(255, 255, 255, 0.05);;
+                                transition: 0.5s;
+                            }
                         }
                     }
                 }
@@ -402,6 +482,8 @@ input:focus, textarea:focus {
                 margin-top: 40px;
 
                 .elem {
+                    width: 100%;
+
                     .row-2 {
                         .who-am-i {
                             background: transparent;
