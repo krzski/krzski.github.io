@@ -123,6 +123,9 @@ input:focus, textarea:focus {
   font-size: 20px;
   font-weight: bold;
   line-height: 25px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .elem {
@@ -132,8 +135,10 @@ input:focus, textarea:focus {
           box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
   min-height: 80px;
   margin-top: 25px;
+  margin-left: 7%;
+  margin-right: 3%;
   position: relative;
-  width: 270px;
+  width: 90%;
 }
 
 .small-icon {
@@ -146,13 +151,12 @@ input:focus, textarea:focus {
   margin-top: -30px;
   margin-left: auto;
   margin-right: auto;
-  width: 85%;
+  width: 95%;
   padding-bottom: 30px !important;
 }
 
-.col-r {
-  margin-right: 0;
-  margin-left: auto;
+.col {
+  width: 100%;
 }
 
 #page header {
@@ -418,18 +422,22 @@ input:focus, textarea:focus {
   transition: 0.5s;
 }
 
-#page #cards-container #contact .contact-form {
-  width: 85%;
+#page #cards-container #contact .contact-container .contact-form {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 40px;
 }
 
-#page #cards-container #contact .contact-form .elem {
-  width: 100%;
+#page #cards-container #contact .contact-container .contact-form .title-row {
+  margin-top: 25px;
 }
 
-#page #cards-container #contact .contact-form .elem .row-2 .who-am-i {
+#page #cards-container #contact .contact-container .contact-form .elem {
+  margin-left: 4%;
+  margin-right: 5%;
+  width: 95%;
+}
+
+#page #cards-container #contact .contact-container .contact-form .elem .row-2 .who-am-i {
   background: transparent;
   border-bottom: 2px solid #585858;
   font-size: 18px;
@@ -440,13 +448,13 @@ input:focus, textarea:focus {
   transition: 0.5s;
 }
 
-#page #cards-container #contact .contact-form .elem .row-2 .who-am-i:focus {
+#page #cards-container #contact .contact-container .contact-form .elem .row-2 .who-am-i:focus {
   border-bottom: 2px solid #909090;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-#page #cards-container #contact .contact-form .elem textarea {
+#page #cards-container #contact .contact-container .contact-form .elem textarea {
   background: transparent;
   border-bottom: 2px solid #585858;
   font-size: 18px;
@@ -460,13 +468,13 @@ input:focus, textarea:focus {
   transition: 0.5s;
 }
 
-#page #cards-container #contact .contact-form .elem textarea:focus {
+#page #cards-container #contact .contact-container .contact-form .elem textarea:focus {
   border-bottom: 2px solid #909090;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-#page #cards-container #contact .contact-form .elem .submit {
+#page #cards-container #contact .contact-container .contact-form .elem .submit {
   background: transparent;
   cursor: pointer;
   font-size: 18px;
@@ -477,11 +485,93 @@ input:focus, textarea:focus {
   transition: 0.5s;
 }
 
-#page #cards-container #contact .contact-form .elem .submit:hover {
+#page #cards-container #contact .contact-container .contact-form .elem .submit:hover {
   color: #f0f0f0;
   margin-left: 55px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+#project-info {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: linear-gradient(135deg, #080808 0, #585858 100%);
+  border-radius: 10px;
+  overflow: hidden auto;
+  width: 700px;
+  height: 95vh;
+}
+
+#project-info .content {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 15px !important;
+  width: 90%;
+}
+
+#project-info .content #close {
+  position: absolute;
+  top: -60px;
+  right: -30px;
+  width: 25px;
+  -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(214deg) brightness(102%) contrast(104%);
+          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(214deg) brightness(102%) contrast(104%);
+}
+
+#project-info .content img {
+  border-radius: 10px;
+  display: block;
+  margin-top: 35px;
+  width: 100%;
+}
+
+#project-info .content #title {
+  color: white;
+  font-size: 26px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+#project-info .content .description {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+#project-info .content .list {
+  margin-top: 20px;
+}
+
+#project-info .content .list .list-title {
+  color: #f0f0f0;
+  font-size: 18px;
+}
+
+#project-info .content .list ul {
+  list-style-type: disc;
+}
+
+#project-info .content .list ul li {
+  margin-left: 20px;
+  color: green;
+}
+
+#project-info .content .list ul li a {
+  color: darkgray;
+}
+
+#project-info .content .bordered-text {
+  color: #808080;
+  border-left: 3px solid green;
+  font-size: 16px;
+  margin-top: 20px;
+  padding-left: 15px !important;
 }
 
 ::-webkit-scrollbar {
