@@ -76,10 +76,12 @@ let closeInfo = document.getElementById("close");
 
 management.addEventListener("click", function () {
     projectInfo.style.display = "block";
+    projectInfo.style.zIndex = "5";
 });
 
 closeInfo.addEventListener("click", function () {
     projectInfo.style.display = "none";
+    projectInfo.style.zIndex = "-5";
 });
 
 
