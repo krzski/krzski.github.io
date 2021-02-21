@@ -493,7 +493,8 @@ input:focus, textarea:focus {
 }
 
 #project-info {
-  visibility: none;
+  display: none;
+  z-index: -5;
   position: fixed;
   top: 0;
   bottom: 0;
