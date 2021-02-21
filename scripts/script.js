@@ -69,6 +69,20 @@ function cardAnimate(text, photo, id) {
     last = id
 }
 
+//Portfolio card scripts
+let management = document.getElementById("management");
+let projectInfo = document.getElementById("project-info");
+let closeInfo = document.getElementById("close");
+
+management.addEventListener("click", function () {
+    projectInfo.style.display = "block";
+});
+
+closeInfo.addEventListener("click", function () {
+    projectInfo.style.display = "none";
+});
+
+
 // Contact card scripts
 const textarea = document.getElementById("textarea");
 let lastLength = 0;
