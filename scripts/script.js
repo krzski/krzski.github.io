@@ -70,13 +70,19 @@ function cardAnimate(text, photo, id) {
 }
 
 //Portfolio card scripts
-let management = document.getElementById("management");
-let projectInfo = document.getElementById("project-info");
-let closeInfo = document.getElementById("close");
+let manApp = ["Task management application", "Description", "Technologies: PHP & Laravel 7, JavaScript, MariaDB, MongoDB", "<a href='https://youtu.be/K10dwuOQHwI' target='_blank'>General presentation of the activity, only in Polish - YouTube</a>"];
+let title = document.getElementById("title");
+let description = document.getElementById("description");
+let tech = document.getElementById("bordered-text");
+let links = document.getElementById("links");
 
 management.addEventListener("click", function () {
     projectInfo.style.display = "block";
     projectInfo.style.zIndex = "5";
+    title.innerHTML = manApp[0];
+    description.innerHTML = manApp[1];
+    tech.innerHTML = manApp[2];
+    links.innerHTML = manApp[3];
 });
 
 closeInfo.addEventListener("click", function () {
