@@ -1,21 +1,32 @@
-/*
-+-------------------------------+
-|       Table of contents       |
->-------------------------------<
-|  1. General section           |
-|  2. Mixin, class etc.         |
-|  3. Navbar                    |
->-------------------------------<
+// +-------------------------------+
+// |       Table of contents       |
+// >-------------------------------<
+// |  1. General section           |
+// |  2. Mixin, class etc.         |
+// |  3. Navbar                    |
+// |  4. Cards                     |
+// |  5. About me card             |
+// |  6. Resume card               |
+// |  7. Portfolio card            |
+// |  8. Contact card              |
+// |  x. Scrollbar                 |
+// >-------------------------------<
 
-+------
-|  1. General Section
-+------------*/
+// +------
+// |  1. General Section
+// +------------
 * {
     border: 0;
     color: darkgray;
     font-family: 'Oswald', Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0 !important;
+    -webkit-touch-callout: none;
+    user-select: none;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 ul {
@@ -27,11 +38,19 @@ a {
     text-decoration: none;
 }
 
+strong {
+    color: #4286f4;
+}
 
-/*
-+------
-|  2. Mixin, class etc.
-+------------*/
+input:focus, textarea:focus {
+    outline: none;
+}
+
+
+
+// +------
+// |  2. Mixin, class etc.
+// +------------
 .img-icon {
     filter: invert(78%) sepia(1%) saturate(0%) hue-rotate(335deg) brightness(88%) contrast(86%);
     height: 30px;
@@ -40,6 +59,8 @@ a {
 }
 
 .icon:hover {
+    cursor: pointer;
+
     span {
         &.tooltip {
             opacity: 1;
@@ -86,58 +107,552 @@ a {
     }
 }
 
-/*
-+------
-|  3. Navbar
-+------------*/
-header {
-    background: #1f1f1f;
-    position: fixed;
-    left: 0;
+.card {
     height: 100vh;
-    width: 50px;
-    text-align: center;
+    position: absolute;
+}
 
-    nav {
-        height: 100%;
+.text {
+    background: linear-gradient(135deg, #080808 0, #585858 100%);
+    overflow-y: scroll;
+    width: 50%;
+}
+
+.photo {
+    right: 0;
+    width: 50%;
+}
+
+.photo {
+
+    img {
         width: 100%;
-        position: relative;
+        height: 100%;
+    }
+}
 
-        #up-side-menu {
+.row-2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
 
-            div {
-                &#logo {
-                    cursor: default;
-                    background-image: linear-gradient(to bottom right, #373b44, #4286f4);
-                    height: 58px;
-                    line-height: 58px;
+.title-row {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 25px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-                    span {
-                        font-size: 28px;
+.elem {
+    border-radius: 25px;
+    background: rgba(128, 128, 128, 0.05);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    min-height: 80px;
+    margin-top: 25px;
+    margin-left: 7%;
+    margin-right: 3%;
+    position: relative;
+    width: 90%;
+}
+
+.small-icon {
+    height: 15px;
+    filter: invert(63%) sepia(58%) saturate(6323%) hue-rotate(200deg) brightness(100%) contrast(92%);
+}
+
+.container {
+    margin-top: -30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    padding-bottom: 30px !important;
+}
+
+.col {
+    width: 100%;
+}
+
+// +------
+// |  3. Navbar
+// +------------
+#page {
+    header {
+        background: #1f1f1f;
+        position: fixed;
+        left: 0;
+        height: 100vh;
+        width: 50px;
+        text-align: center;
+        z-index: 10000;
+
+        nav {
+            height: 100%;
+            width: 100%;
+            position: relative;
+
+            #up-side-menu {
+
+                div {
+                    &#logo {
+                        cursor: default;
+                        background-image: linear-gradient(to bottom right, #373b44, #4286f4);
+                        height: 58px;
+                        line-height: 58px;
+
+                        span {
+                            font-size: 28px;
+                        }
                     }
-                }
-                
-                &.icon {
-                    padding-top: 15px !important;
 
-                    a {
-                        position: relative;
+                    &.icon {
+                        padding-top: 15px !important;
+    
+                        a {
+                            position: relative;
+                        }
                     }
                 }
             }
-        }
 
-        #down-side-menu {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin-left: auto;
-            margin-right: auto;
+            #down-side-menu {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
 
-            div {
-                padding-bottom: 15px !important;
+                div {
+                    padding-bottom: 15px !important;
+                }
             }
         }
     }
+
+    // +------
+    // |  4. Cards
+    // +------------
+
+    #cards-container {
+        .cards {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            margin-left: 50px;
+            position: relative;
+            z-index: -1;
+
+            .card-title {
+                background: linear-gradient(rgba(152,152,152, 0.25), rgba(152,152,152, 0));
+                -webkit-background-clip: text;
+                font-family: 'Roboto';
+                font-size: 110px;
+                text-align: center;
+                margin-left: 10px;
+                margin-top: 30px;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        // +------
+        // |  5. About me card
+        // +------------
+        #about {
+            .paragraph {
+                font-size: 22px;
+                font-weight: 300;
+                line-height: 1.5;
+                margin-top: -50px;
+                text-align: center;
+            }
+        }
+        
+        // +------
+        // |  6. Resume card
+        // +------------
+        #resume {
+            .resume-container {
+                .row-2 {
+                    .col {
+                        .elem {
+                            div {
+                                margin-left: 22.5px;
+                                margin-right: 22.5px;
+
+                                p {
+                                    color: white;
+                                    font-size: 20px;
+                                    font-weight: 700;
+                                    padding-top: 20px !important;
+    
+                                    &.undertitle {
+                                        color: #808080;
+                                        font-size: 13px;
+                                        font-weight: 400;
+                                        padding-top: 5px !important;
+                                    }
+
+                                    &.opis {
+                                        font-size: 17px;
+                                        font-weight: 300;
+                                        color: darkgray;
+                                        padding-bottom: 30px !important;
+                                        padding-top: 0 !important;
+                                        margin-top: 15px !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .skills-container {
+                margin-top: 40px;
+
+                .row-2 {
+                    .col {
+                        .elem {
+                            padding-bottom: 20px !important;
+
+                            .skill {
+                                li {
+                                    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+                                    padding-top: 20px !important;
+                                    
+                                    div {
+                                        color: #f0f0f0;
+                                        margin-left: 22.5px;
+                                        margin-right: 22.5px;
+
+                                        .progressbar {
+                                            width: 100%;
+                                            height: 6px;
+                                            margin-left: 0;
+                                            margin-top: 5px;
+                                            margin-bottom: 20px;
+                                            background: #909090;
+
+                                            .fill {
+                                                height: 100%;
+                                                background: green;
+                                                margin: 0;
+                                                padding: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // +------
+        // |  7. Portfolio card
+        // +------------
+        #portfolio {
+            .portfolio-container {
+                .elem {
+                    margin-top: 40px;
+                    transition: 0.5s;
+
+                    &:nth-child(1) {
+                        margin-top: 20px;
+                    }
+
+                    .img {
+                        overflow: hidden;
+                        border-radius: 25px 25px 0 0;
+                        position: relative;
+
+                        img {
+                            width: 100%;
+                            max-height: 100% !important;
+                            transition: 0.5s;
+                        }
+
+                        .img-color {
+                            background: rgb(66, 134, 244);
+                            display: block;
+                            opacity: 0;
+                            height: 100%;
+                            width: 100%;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            transition: 0.5s;
+                        }
+                    }
+                    
+                    .info {
+                        margin-left: 22.5px;
+                        margin-right: 22.5px;
+                        padding-bottom: 15px !important;
+                        text-align: center;
+
+                        p {
+                            color: white;
+                            font-size: 18px;
+                        }
+
+                        a {
+                            color: #909090;
+                            font-size: 12px;
+                        }
+                    }
+
+                    &:hover {
+                        background: rgba(255, 255, 255, 0.05);
+                        box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+                        cursor: pointer;
+                        transition: 0.5s;
+
+                        .img {
+                            img {
+                                transform: scale(1.1);
+                                transform-origin: center;
+                                transition: 0.5s;
+                            }
+
+                            .img-color {
+                                background: rgb(66, 134, 244);
+                                opacity: 0.5;
+                                transition: 0.5s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // +------
+        // |  8. Contact card
+        // +------------
+        #contact {
+            .contact-container {                
+                .row-2 {
+                    .col {
+                        .elem {
+                            .icon {
+                                height: 40px;
+                                max-width: 40px;
+                                line-height: 40px;
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                margin-top: auto;
+                                margin-bottom: auto;
+                                left: 15px;
+                                filter: invert(63%) sepia(58%) saturate(6323%) hue-rotate(200deg) brightness(100%) contrast(92%);
+                            }
+
+                            .contact-text {
+                                padding-top: 15px !important;
+
+                                p {
+                                    margin-left: 65px;
+                                    font-size: 18px;
+                                }
+    
+                                a {
+                                    color: #808080;
+                                    margin-left: 65px;
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+
+                        .contact-elem {
+                            transition: 0.5s;
+
+                            &:hover {
+                                cursor: pointer;
+                                box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+                                background: rgba(255, 255, 255, 0.05);;
+                                transition: 0.5s;
+                            }
+                        }
+                    }
+                }
+
+                .contact-form {
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    .title-row {
+                        margin-top: 25px;
+                    }
+    
+                    .elem {
+                        margin-left: 4%;
+                        margin-right: 5%;
+                        width: 95%;
+
+                        .row-2 {
+                            .who-am-i {
+                                background: transparent;
+                                border-bottom: 2px solid #585858;
+                                font-size: 18px;
+                                margin-left: 40px;
+                                margin-top: 30px;
+                                width: 70%;
+                                transition: 0.5s;
+        
+                                &:focus {
+                                    border-bottom: 2px solid #909090;
+                                    transition: 0.5s;
+                                }
+                            }
+                        }
+    
+                        textarea {
+                            background: transparent;
+                            border-bottom: 2px solid #585858;
+                            font-size: 18px;
+                            height: 50px;
+                            line-height: 22px;
+                            margin-left: 40px;
+                            margin-top: 20px;
+                            resize: vertical;
+                            width: 85%;
+                            transition: 0.5s;
+    
+                            &:focus {
+                                border-bottom: 2px solid #909090;
+                                transition: 0.5s;
+                            }
+                        }
+    
+                        .submit {
+                            background: transparent;
+                            cursor: pointer;
+                            font-size: 18px;
+                            margin-left: 40px;
+                            margin-top: 15px;
+                            margin-bottom: 30px;
+                            transition: 0.5s;
+    
+                            &:hover {
+                                color: #f0f0f0;
+                                margin-left: 55px;
+                                transition: 0.5s;
+                            }
+                        }
+                    }
+                }
+            }
+
+            
+        }
+    }
+}
+
+#project-info {
+    display: none;
+    z-index: -5;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: linear-gradient(135deg, #080808 0, #585858 100%);
+    border-radius: 10px;
+    overflow: hidden auto;
+    width: 700px;
+    height: 70vh;
+
+    .content {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 15px !important;
+        width: 90%;
+
+        #close {
+            cursor: pointer;
+            position: absolute;
+            top: -60px;
+            right: -30px;
+            width: 25px;
+            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(214deg) brightness(102%) contrast(104%);
+            transition: 0.5s;
+
+            &:hover {
+                filter: invert(63%) sepia(58%) saturate(6323%) hue-rotate(200deg) brightness(100%) contrast(92%);
+                transition: 0.5s;
+            }
+        }
+
+        img {
+            border-radius: 10px;
+            display: block;
+            margin-top: 35px;
+            width: 100%;
+        }
+
+        #title {
+            color: white;
+            font-size: 26px;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+
+        .description {
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 1.5;
+            margin-top: 10px;
+        }
+
+        .list {
+            margin-top: 20px;
+            .list-title {
+                color: #f0f0f0;
+                font-size: 18px;
+            }
+
+            ul {
+                list-style-type: disc;
+
+                li {
+                    margin-left: 20px;
+                    color: green;
+
+                    a {
+                        color: darkgray;
+                    }
+                }
+            }
+        }
+
+        .bordered-text {
+            color: #808080;
+            border-left: 3px solid green;
+            font-size: 16px;
+            margin-top: 20px;
+            padding-left: 15px !important;
+        }
+    }   
+}
+
+// +------
+// |  X. Scrollbar
+// +------------
+::-webkit-scrollbar {
+    width: 15px;
+}
+   
+::-webkit-scrollbar-thumb {
+    background-clip: content-box;
+    border: 5px solid transparent;
+    border-radius: 7px;
+    box-shadow: inset 0 0 0 10px;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
 }

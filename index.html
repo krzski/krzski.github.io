@@ -13,64 +13,355 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/style.css">    
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+    <div id="page">
 
-    <!-- Navigation menu -->
-    <header>
-        <nav>
-            <div id="up-side-menu">
-                <div id="logo">
-                    <span>K</span>
+        <!-- Navigation menu -->
+        <header>
+            <nav>
+                <div id="up-side-menu">
+                    <div id="logo">
+                        <span>K</span>
+                    </div>
+
+                    <div class="icon" onclick="cardSwitcher(1)">
+                        <a>
+                            <img src="images/icons/person.svg" class="img-icon" alt="">
+                            <span class="tooltip">About me</span>
+                        </a>
+                    </div>
+
+                    <div class="icon" onclick="cardSwitcher(2)">
+                        <a>
+                            <img src="images/icons/resume.svg" class="img-icon" alt="">
+                            <span class="tooltip">Resume</span>
+                        </a>
+                    </div>
+                    
+                    <div class="icon" onclick="cardSwitcher(3)">
+                        <a>
+                            <img src="images/icons/portfolio.svg" class="img-icon" alt="">
+                            <span class="tooltip">Portfolio</span>
+                        </a>
+                    </div>
+                    
+                    <div class="icon" onclick="cardSwitcher(4)">
+                        <a>
+                            <img src="images/icons/contact.svg" class="img-icon" alt="">
+                            <span class="tooltip" translate="yes">Contact</span>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="icon">
-                    <a href="###">
-                        <img src="images/icons/person.svg" class="img-icon" alt="">
-                        <span class="tooltip">About me</span>
-                    </a>
+                <div id="down-side-menu">
+                    <div class="icon">
+                        <a href="https://www.facebook.com/fkrzski" target="_blank">
+                            <img src="images/icons/facebook.svg" class="img-icon" alt="">
+                            <span class="tooltip" translate="yes">Facebook</span>
+                        </a>
+                    </div>
+                    <div class="icon">
+                        <a href="https://github.com/fkrzski" target="_blank">
+                            <img src="images/icons/github.svg" class="img-icon" alt="">
+                            <span class="tooltip" translate="yes">Github</span>
+                        </a>
+                    </div>
                 </div>
+            </nav>
+        </header>
 
-                <div class="icon">
-                    <a href="">
-                        <img src="images/icons/resume.svg" class="img-icon" alt="">
-                        <span class="tooltip">Resume</span>
-                    </a>
+        <!-- Cards -->
+        <div id="cards-container">
+            <div class="cards" id="about" style="display: grid; z-index: 1;">
+                <div class="card text">
+                    <h1 class="card-title">ABOUT ME</h1>
+
+                    <div class="paragraph">
+                        <p>
+                            <strong>Hello. I'm Filip</strong>, student who is learning web-development.<br>
+                            Every day I gather new experience in this field.<br>
+                            I'm good at <strong>html, css, bootstrap, php and laravel.</strong><br>
+                            Currently i'm learning <strong>javscript.</strong>
+                        </p>
+                    </div>
                 </div>
-                
-                <div class="icon">
-                    <a href="">
-                        <img src="images/icons/portfolio.svg" class="img-icon" alt="">
-                        <span class="tooltip">Portfolio</span>
-                    </a>
-                </div>
-                
-                <div class="icon">
-                    <a href="">
-                        <img src="images/icons/contact.svg" class="img-icon" alt="">
-                        <span class="tooltip" translate="yes">Contact</span>
-                    </a>
+    
+                <div class="card photo">
+                    <img src="images/photos/zdjecie.jpg" alt="" srcset="">
                 </div>
             </div>
 
-            <div id="down-side-menu">
-                <div class="icon">
-                    <a href="">
-                        <img src="images/icons/facebook.svg" class="img-icon" alt="">
-                        <span class="tooltip" translate="yes">Facebook</span>
-                    </a>
+            <div class="cards" id="resume">
+                <div class="card text">
+                    <h1 class="card-title">RESUME</h1>
+
+                    <div class="container resume-container">
+                        <div class="row-2">
+                            <div class="col col-l">
+                                <div class="title-row">
+                                    <p><strong>My</strong> Experience</p>
+                                </div>
+
+                                <div class="elem">
+                                    <div>
+                                        <p>Professional pratice</p>
+                                        <p class="undertitle">October 2020 | Raltech</p>
+                                        <p class="opis">Jakis tam opis praktyki zawodowej ktory dodam potem bo mi sie nie chce teraz</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col col-r">
+                                <div class="title-row">
+                                    <p><strong>My</strong> Education</p>
+                                </div>
+
+                                <div class="elem">
+                                    <div>
+                                        <p>Zespół Szkół Technicznych</p>
+                                        <p class="undertitle">2018 - Present | Ostrów Wlkp.</p>
+                                        <p class="opis">Title of IT technician and Matura exam.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container skills-container">
+                        <div class="row-2">
+                            <div class="col col-l">
+                                <div class="title-row">
+                                    <p><strong>Professional</strong> Skills</p>
+                                </div>
+
+                                <div class="elem">
+                                    <ul class="skill">
+                                        <li>
+                                            <div class="progress">
+                                                <a>PHP & Laravel</a>
+                                                <div class="progressbar">
+                                                    <div class="fill" style="width: 75%;"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="progress">
+                                                <a>HTML / CSS / JS</a>
+                                                <div class="progressbar">
+                                                    <div class="fill" style="width: 85%;"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="progress">
+                                                <a>MySQL / MySQLi / MongoDB</a>
+                                                <div class="progressbar">
+                                                    <div class="fill" style="width: 70%;"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="progress">
+                                                <a>Microcontrollers</a>
+                                                <div class="progressbar">
+                                                    <div class="fill" style="width: 40%;"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col col-r">
+                                <div class="title-row">
+                                    <p><strong>Personal</strong> Skills</p>
+                                </div>
+
+                                <div class="elem">
+                                    <ul class="skill">
+                                        <li>
+                                            <div class="progress">
+                                                <a>Communication</a>
+                                                <div class="progressbar">
+                                                    <div class="fill" style="width: 90%;"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="progress">
+                                                <a>Leadership</a>
+                                                <div class="progressbar">
+                                                    <div class="fill" style="width: 50%;"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="progress">
+                                                <a>Team Work</a>
+                                                <div class="progressbar">
+                                                    <div class="fill" style="width: 70%;"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="progress">
+                                                <a>English</a>
+                                                <div class="progressbar">
+                                                    <div class="fill" style="width: 65%;"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="icon">
-                    <a href="">
-                        <img src="images/icons/github.svg" class="img-icon" alt="">
-                        <span class="tooltip" translate="yes">Github</span>
-                    </a>
+
+                <div class="card photo">
+                    <img src="images/photos/zdjecie.jpg" alt="" srcset="">
                 </div>
             </div>
-        </nav>
-    </header>
+
+            <div class="cards" id="portfolio">
+                <div class="card text">
+                    <h1 class="card-title">PORTFOLIO</h1>
+
+                    <div class="portfolio-container container">
+                        <div class="title-row">
+                            <p><strong>My</strong> portfolio</p>
+                        </div>
+
+                        <div class="row-2">
+                            <div class="col col-l">
+                                <div class="elem" id="management">
+                                    <div class="img">
+                                        <img src="images/photos/tasklist.png" alt="">
+                                        <span class="img-color"></span>
+                                    </div>
+
+                                    <div class="info">
+                                        <p>Task management application</p>
+                                        <a>Web application</a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col col-r">
+                                <div class="elem" id="ciri" onclick="window.open('http://ciri.ct8.pl/blog', '_blank')">
+                                    <div class="img">
+                                        <img src="images/photos/obroza.jpg" alt="">
+                                        <span class="img-color"></span>
+                                    </div>
+
+                                    <div class="info">
+                                        <p>Project "CIRI"</p>
+                                        <a>Project based on microcontrollers - Redirect to another domain, only in Polish.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card photo">
+                    <img src="images/photos/zdjecie.jpg" alt="" srcset="">
+                </div>
+            </div>
+
+            <div class="cards" id="contact">
+                <div class="card text">
+                    <h1 class="card-title">CONTACT</h1>
+
+                    <div class="container contact-container">
+                        <div class="title-row">
+                            <p><strong>Let's be</strong> in Touch</p>
+                        </div>
+                        <div class="row-2">
+                            <div class="col col-l">
+                                <div class="elem" id="addres">
+                                    <img src="images/icons/gps.svg" class="icon" alt="">
+                                    <div class="contact-text">
+                                        <p>Addres</p>
+                                        <a>Poland, Krotoszyn</a>
+                                    </div>
+                                </div>
+
+                                <div class="elem contact-elem" onclick="location.href = 'https://discordapp.com/users/359297842059149314/'">
+                                    <img src="images/icons/discord.svg" class="icon" alt="">
+                                    <div class="contact-text">
+                                        <p>fkrzski</p>
+                                        <a>#4200</a>
+                                    </div>
+                                </div>
+                            </div>
 
 
+                            <div class="col col-r">
+                                <div class="elem contact-elem" onclick="location.href = 'mailto:filip.krzyzanowski@protonmail.com'">
+                                    <img src="images/icons/email.svg" class="icon" alt="">
+                                    <div class="contact-text">
+                                        <p>E-mail</p>
+                                        <a>filip.krzyzanowski@protonmail.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-form">
+                            <div class="title-row">
+                                <p><strong>Contact</strong> form</p>
+                            </div>
+                            <form class="elem">
+                                <div class="row-2">
+                                    <input type="text" name="" id="" class="who-am-i" placeholder="Full name" required>
+                                    <input type="text" name="" id="" class="who-am-i" placeholder="E-mail adress" required>
+                                </div>
+                                <textarea name="" id="textarea" placeholder="Your message" required></textarea>
+    
+                                <button type="submit" class="submit">Send message <img src="images/icons/arrow.svg" alt="" class="small-icon"></button>
+                            </form>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+                <div class="card photo">
+                    <img src="images/photos/zdjecie.jpg" alt="" srcset="">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="project-info">
+        <div class="content">
+            <span id="close"><img src="images/icons/close.svg" alt=""></span>
+            <img src="images/photos/tasklist.png" alt="">
+            <p id="title">
+                Task management application
+            </p>
+            <p class="description">
+                Opis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis projektuOpis projektu opis 
+            </p>
+            <div class="list">
+                <a class="list-title">Tytuł listy</a>
+                <ul>
+                    <li><a>Pozycja</a></li>
+                    <li><a>Pozycja</a></li>
+                    <li><a>Pozycja</a></li>
+                </ul>
+            </div>
+            <p class="bordered-text">
+                Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis Opis 
+            </p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="scripts/script.js"></script>
 </body>
 </html>
