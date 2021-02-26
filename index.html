@@ -29,14 +29,14 @@
                     <div class="icon" onclick="cardSwitcher(1)">
                         <a>
                             <img src="images/icons/person.svg" class="img-icon" alt="">
-                            <span class="tooltip">About me</span>
+                            <span class="tooltip">O mnie</span>
                         </a>
                     </div>
 
                     <div class="icon" onclick="cardSwitcher(2)">
                         <a>
                             <img src="images/icons/resume.svg" class="img-icon" alt="">
-                            <span class="tooltip">Resume</span>
+                            <span class="tooltip">Praktyka</span>
                         </a>
                     </div>
                     
@@ -50,7 +50,7 @@
                     <div class="icon" onclick="cardSwitcher(4)">
                         <a>
                             <img src="images/icons/contact.svg" class="img-icon" alt="">
-                            <span class="tooltip" translate="yes">Contact</span>
+                            <span class="tooltip" translate="yes">Kontakt</span>
                         </a>
                     </div>
                 </div>
@@ -76,15 +76,34 @@
         <div id="cards-container">
             <div class="cards" id="about" style="display: grid; z-index: 1;">
                 <div class="card text">
-                    <h1 class="card-title">ABOUT ME</h1>
+                    <h1 class="card-title">O MNIE</h1>
 
-                    <div class="paragraph">
-                        <p>
-                            <strong>Hello. I'm Filip</strong>, student who is learning web-development.<br>
-                            Every day I gather new experience in this field.<br>
-                            I'm good at <strong>html, css, bootstrap, php and laravel.</strong><br>
-                            Currently i'm learning <strong>javscript.</strong>
-                        </p>
+                    <div class="container about-contaier">
+                        <div id="text">
+                            <p class="about-main">
+                                <strong>Jestem Filip.</strong> Jestem 19-sto letnim uczeniem <strong>zafascynowanym wszelakiej maści programowaniem</strong> począwszy od mikrokontrolerów, aż po języki wysokiego poziomu. <strong>Chcący rozwijać swoje umiejętności</strong> we wszystkim czego się chwyci oraz podejmujący nawet <strong>najcięższe wyzwania.</strong>
+                            </p>
+                            <div class="det-photo">
+                                <img src="images/photos/zdjecie.jpg" alt="">
+                            </div>
+                            <div class="my-history elem">
+                                <p id="about-history">
+                                    Moja historia z programowaniem <strong>rozpoczęła się w gimnazjum.</strong>  Pierwszy raz włączyłem wtedy program <strong>Eclipse</strong> z chęcią nauki <strong>Javy.</strong> Ta przygoda nie trwała jednak długo i już kilka tygodni później zacząłem sporadyczną naukę <strong>HTML i CSS.</strong>
+                                    <br><br>
+                                    Mimo że programować zaczynałem w gimnazjum, dopiero w technikum zacząłem je brać bardziej na <strong>&quot;Poważnie&quot;.</strong> Wtedy to bardziej zgłębiłem temat pogramowania kupując <strong>Arduino</strong>, tworząc pierwsze programy w <strong>C++</strong> oraz <strong>Pythonie</strong>, czy <strong>zakochując się w web developmencie.</strong>
+                                </p>
+                            </div>
+
+                            <div class="buttons">
+                                <div class="github-button" id="github-button">
+                                    <div>
+                                        <img src="images/icons/github.svg" class="img-icon" alt="">
+                                        <p>Github</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
     
@@ -95,40 +114,41 @@
 
             <div class="cards" id="resume">
                 <div class="card text">
-                    <h1 class="card-title">RESUME</h1>
+                    <h1 class="card-title">PRAKTYKA</h1>
 
                     <div class="container resume-container">
                         <div class="row-2">
                             <div class="col col-l">
                                 <div class="title-row">
-                                    <p><strong>My</strong> Experience</p>
+                                    <p>Moje<strong> doświadczenie</strong></p>
                                 </div>
 
                                 <div class="elem">
                                     <div>
                                         <p>Professional pratice</p>
-                                        <p class="undertitle">October 2020 | Raltech</p>
-                                        <p class="opis">Jakis tam opis praktyki zawodowej ktory dodam potem bo mi sie nie chce teraz</p>
+                                        <p class="undertitle">Październik 2020 | Raltech</p>
+                                        <p class="opis">Miesięczne praktyki, podczas których zapoznałem się z pracą w zawodzie i stworzyłem aplikację typu CRUD.</p>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col col-r">
                                 <div class="title-row">
-                                    <p><strong>My</strong> Education</p>
+                                    <p>Moje <strong>wykształcenie</strong></p>
                                 </div>
 
                                 <div class="elem">
                                     <div>
                                         <p>Zespół Szkół Technicznych</p>
-                                        <p class="undertitle">2018 - Present | Ostrów Wlkp.</p>
-                                        <p class="opis">Title of IT technician and Matura exam.</p>
+                                        <p class="undertitle">2018 - Obecnie | Ostrów Wlkp.</p>
+                                        <p class="opis">Tytuł technika oraz egzamin maturalny</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
+                    <!--
                     <div class="container skills-container">
                         <div class="row-2">
                             <div class="col col-l">
@@ -218,6 +238,7 @@
                             </div>
                         </div>
                     </div>
+                    -->
                 </div>
 
                 <div class="card photo">
@@ -231,7 +252,7 @@
 
                     <div class="portfolio-container container">
                         <div class="title-row">
-                            <p><strong>My</strong> portfolio</p>
+                            <p>Moje <strong>portfolio</strong></p>
                         </div>
 
                         <div class="row-2">
@@ -243,8 +264,8 @@
                                     </div>
 
                                     <div class="info">
-                                        <p>Task management application</p>
-                                        <a>Web application</a>
+                                        <p>Aplikacja do zarządzania zadaniami</p>
+                                        <a>CRUD</a>
                                     </div>
                                 </div>
                             </div>
@@ -258,7 +279,7 @@
 
                                     <div class="info">
                                         <p>Project "CIRI"</p>
-                                        <a>Project based on microcontrollers - Redirect to another domain, only in Polish.</a>
+                                        <a>Projekt oparty na mikrokontrolerach</a>
                                     </div>
                                 </div>
                             </div>
@@ -273,19 +294,19 @@
 
             <div class="cards" id="contact">
                 <div class="card text">
-                    <h1 class="card-title">CONTACT</h1>
+                    <h1 class="card-title">KONAKT</h1>
 
                     <div class="container contact-container">
                         <div class="title-row">
-                            <p><strong>Let's be</strong> in Touch</p>
+                            <p>Bądźmy <strong>w kontakcie</strong></p>
                         </div>
                         <div class="row-2">
                             <div class="col col-l">
                                 <div class="elem" id="addres">
                                     <img src="images/icons/gps.svg" class="icon" alt="">
                                     <div class="contact-text">
-                                        <p>Addres</p>
-                                        <a>Poland, Krotoszyn</a>
+                                        <p>Adres</p>
+                                        <a>Polska, Krotoszyn</a>
                                     </div>
                                 </div>
 
@@ -312,16 +333,16 @@
 
                         <div class="contact-form">
                             <div class="title-row">
-                                <p><strong>Contact</strong> form</p>
+                                <p>Napisz <strong>do mnie</strong></p>
                             </div>
                             <form class="elem">
                                 <div class="row-2">
-                                    <input type="text" name="" id="" class="who-am-i" placeholder="Full name" required>
-                                    <input type="text" name="" id="" class="who-am-i" placeholder="E-mail adress" required>
+                                    <input type="text" name="" id="" class="who-am-i" placeholder="Imię i nazwisko" required>
+                                    <input type="text" name="" id="" class="who-am-i" placeholder="E-mail" required>
                                 </div>
-                                <textarea name="" id="textarea" placeholder="Your message" required></textarea>
+                                <textarea name="" id="textarea" placeholder="Twoja wiadomość" required></textarea>
     
-                                <button type="submit" class="submit">Send message <img src="images/icons/arrow.svg" alt="" class="small-icon"></button>
+                                <button type="submit" class="submit">Wyślij  &nbsp;<img src="images/icons/arrow.svg" alt="" class="small-icon"></button>
                             </form>
                         </div>
                     </div>
@@ -345,7 +366,7 @@
 
             <p id="description"></p>
 
-            <p id="bordered-text"></p>
+            <p id="tech"></p>
 
             <p id="links"></p>
         </div>

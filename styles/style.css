@@ -230,12 +230,94 @@ input:focus, textarea:focus {
   -webkit-text-fill-color: transparent;
 }
 
-#page #cards-container #about .paragraph {
+#page #cards-container #about {
+  text-align: center;
+}
+
+#page #cards-container #about .about-main {
   font-size: 22px;
   font-weight: 300;
-  line-height: 1.5;
-  margin-top: -50px;
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -40px;
+  padding: 10px !important;
+  width: 85%;
+}
+
+#page #cards-container #about .det-photo {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#page #cards-container #about .det-photo img {
+  border: 4px solid black;
+  border-radius: 100%;
+  width: 300px;
+  height: 300px;
+}
+
+#page #cards-container #about .my-history {
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+}
+
+#page #cards-container #about .my-history #about-history {
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0 20px;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+#page #cards-container #about .buttons {
+  margin-top: 25px;
+}
+
+#page #cards-container #about .buttons .github-button {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 25px;
+  -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#page #cards-container #about .buttons .github-button div {
+  padding: 7px 10px !important;
+}
+
+#page #cards-container #about .buttons .github-button div img {
+  float: left;
+}
+
+#page #cards-container #about .buttons .github-button div p {
+  font-size: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#page #cards-container #about .buttons .github-button:hover {
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#page #cards-container #about .buttons .github-button:hover img {
+  -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(214deg) brightness(102%) contrast(104%);
+          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(214deg) brightness(102%) contrast(104%);
+}
+
+#page #cards-container #about .buttons .github-button:hover p {
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 #page #cards-container #resume .resume-container .row-2 .col .elem div {
@@ -494,7 +576,7 @@ input:focus, textarea:focus {
 
 #project-info {
   display: none;
-  z-index: -5;
+  z-index: 500;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -549,97 +631,24 @@ input:focus, textarea:focus {
   margin-top: 10px;
 }
 
-#project-info .content .description {
-  font-size: 17px;
-  font-weight: 300;
-  line-height: 1.5;
-  margin-top: 10px;
-}
-
-#project-info .content .list {
-  margin-top: 20px;
-}
-
-#project-info .content .list .list-title {
-  color: #f0f0f0;
-  font-size: 18px;
-}
-
-#project-info .content .list ul {
-  list-style-type: disc;
-}
-
-#project-info .content .list ul li {
-  margin-left: 20px;
-  color: green;
-}
-
-#project-info .content .list ul li a {
-  color: darkgray;
-}
-
-#project-info .content .bordered-text {
-  color: #808080;
-  border-left: 3px solid green;
-  font-size: 16px;
-  margin-top: 20px;
-  padding-left: 15px !important;
-}
-
-#project-info .content {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 15px !important;
-  width: 90%;
-}
-
-#project-info .content #close {
-  cursor: pointer;
-  position: absolute;
-  top: -60px;
-  right: -30px;
-  width: 25px;
-  -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(214deg) brightness(102%) contrast(104%);
-          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(214deg) brightness(102%) contrast(104%);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-#project-info .content #close:hover {
-  -webkit-filter: invert(63%) sepia(58%) saturate(6323%) hue-rotate(200deg) brightness(100%) contrast(92%);
-          filter: invert(63%) sepia(58%) saturate(6323%) hue-rotate(200deg) brightness(100%) contrast(92%);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-#project-info .content img {
-  border-radius: 10px;
-  display: block;
-  margin-top: 35px;
-  width: 100%;
-}
-
-#project-info .content #title {
-  color: white;
-  font-size: 26px;
-  font-weight: 500;
-  margin-top: 10px;
-}
-
 #project-info .content #description {
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 300;
   line-height: 1.5;
   margin-top: 10px;
 }
 
-#project-info .content #bordered-text {
-  color: #808080;
-  border-left: 3px solid green;
-  font-size: 16px;
-  margin-top: 20px;
-  padding-left: 15px !important;
+#project-info .content #tech {
+  padding-top: 15px !important;
+}
+
+#project-info .content #tech tech {
+  background: black;
+  border: 3px solid #4286f4;
+  border-radius: 25px;
+  color: white;
+  font-size: 15px;
+  padding: 3px 7px !important;
 }
 
 #project-info .content #links {

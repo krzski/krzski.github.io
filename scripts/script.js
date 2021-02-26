@@ -69,21 +69,37 @@ function cardAnimate(text, photo, id) {
     last = id
 }
 
-//Portfolio card scripts
-let manApp = ["Task management application", "Description", "Technologies: PHP & Laravel 7, JavaScript, MariaDB, MongoDB", "<a href='https://youtu.be/K10dwuOQHwI' target='_blank'>General presentation of the activity, only in Polish - YouTube</a>"];
+// About card scripts
+let githubButton = document.getElementById("github-button");
+
+githubButton.addEventListener("click", function() {
+    window.open("https://www.github.com/fkrzski", "_blank");
+})
+
+// Portfolio card scripts
+let projectInfo = document.getElementById("project-info");
+let closeInfo = document.getElementById("close");
 let title = document.getElementById("title");
 let description = document.getElementById("description");
-let tech = document.getElementById("bordered-text");
+let tech = document.getElementById("tech");
 let links = document.getElementById("links");
 
 management.addEventListener("click", function () {
     projectInfo.style.display = "block";
     projectInfo.style.zIndex = "5";
-    title.innerHTML = manApp[0];
-    description.innerHTML = manApp[1];
-    tech.innerHTML = manApp[2];
-    links.innerHTML = manApp[3];
+    changeProject(1);
 });
+
+function changeProject (id) {
+    switch(id) {
+        case 1:
+            title.innerHTML = "Aplikacja do zarządzania zadaniami";
+            description.innerHTML = "Aplikacja umożliwiająca tworzenie wielopoziomowych listy zadań, przypisanie pracownika do danego zadania, ustalić konkretną datę zakończenia zadania. Zadania można też w pełni edytować bądź usuwać.";
+            tech.innerHTML = "<tech>PHP & Laravel 7</tech> <tech>MariaDB</tech> <tech>MongoDB</tech>";
+            links.innerHTML = "<a href='https://youtu.be/K10dwuOQHwI' target='_blank'>Ogólne przedstawienie działania - YouTube</a>";
+            break;
+    }
+}
 
 closeInfo.addEventListener("click", function () {
     projectInfo.style.display = "none";
