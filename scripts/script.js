@@ -90,13 +90,27 @@ management.addEventListener("click", function () {
     changeProject(1);
 });
 
+ciri.addEventListener("click", function () {
+    projectInfo.style.display = "block";
+    projectInfo.style.zIndex = "5";
+    changeProject(2);
+});
+
 function changeProject (id) {
     switch(id) {
         case 1:
+            document.getElementById("project-image").src = "images/photos/tasklist.png";
             title.innerHTML = "Aplikacja do zarządzania zadaniami";
             description.innerHTML = "Aplikacja umożliwiająca tworzenie wielopoziomowych listy zadań, przypisanie pracownika do danego zadania, ustalić konkretną datę zakończenia zadania. Zadania można też w pełni edytować bądź usuwać.";
             tech.innerHTML = "<tech>PHP & Laravel 7</tech> <tech>MariaDB</tech> <tech>MongoDB</tech>";
-            links.innerHTML = "<a href='https://youtu.be/K10dwuOQHwI' target='_blank'>Ogólne przedstawienie działania - YouTube</a>";
+            links.innerHTML = "<a class='yt-link' href='https://youtu.be/K10dwuOQHwI' target='_blank'>YouTube</a>";
+            break;
+        case 2:
+            document.getElementById("project-image").src = "images/photos/obroza.jpg";
+            title.innerHTML = "Projekt &quot;Ciri&quot;";
+            description.innerHTML = "Obroża dla zwierzęcia umożliwiająca śledzenie zwierzęcia, ustawienie wirtualnego płotu oraz ostrzeganie zwierzęcia gdy przekroczy granicę płotu. <br> <br>Projekt w trakcie realizacji. <br>Projekt współtworzony z <a href='https://github.com/Kasjonus'>Kacprem Pijackim</a>.";
+            tech.innerHTML = "<tech>ESP 32</tech> <tech>PHP</tech> <tech>React</tech> <tech>MySQL</tech>";
+            links.innerHTML = "<a class='ciri-link' href='https://ciri.ct8.pl/blog' target='_blank'>Blog</a>";
             break;
     }
 }

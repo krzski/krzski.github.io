@@ -95,7 +95,7 @@
                             </div>
 
                             <div class="buttons">
-                                <div class="github-button" id="github-button">
+                                <div class="button github-button" id="github-button">
                                     <div>
                                         <img src="images/icons/github.svg" class="img-icon" alt="">
                                         <p>Github</p>
@@ -125,7 +125,7 @@
 
                                 <div class="elem">
                                     <div>
-                                        <p>Professional pratice</p>
+                                        <p>Praktyka zawodowa</p>
                                         <p class="undertitle">Październik 2020 | Raltech</p>
                                         <p class="opis">Miesięczne praktyki, podczas których zapoznałem się z pracą w zawodzie i stworzyłem aplikację typu CRUD.</p>
                                     </div>
@@ -148,19 +148,18 @@
                         </div>
                     </div>
 
-                    <!--
+                    
+                    <div class="title-row">
+                        <p>Mój <strong>stack technologiczny</strong></p>
+                    </div>
                     <div class="container skills-container">
                         <div class="row-2">
                             <div class="col col-l">
-                                <div class="title-row">
-                                    <p><strong>Professional</strong> Skills</p>
-                                </div>
-
                                 <div class="elem">
                                     <ul class="skill">
                                         <li>
                                             <div class="progress">
-                                                <a>PHP & Laravel</a>
+                                                <a>HTML / CSS</a>
                                                 <div class="progressbar">
                                                     <div class="fill" style="width: 75%;"></div>
                                                 </div>
@@ -168,25 +167,25 @@
                                         </li>
                                         <li>
                                             <div class="progress">
-                                                <a>HTML / CSS / JS</a>
+                                                <a>PHP & Laravel</a>
                                                 <div class="progressbar">
-                                                    <div class="fill" style="width: 85%;"></div>
+                                                    <div class="fill" style="width: 60%;"></div>
                                                 </div>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="progress">
-                                                <a>MySQL / MySQLi / MongoDB</a>
+                                                <a>Javascript</a>
                                                 <div class="progressbar">
-                                                    <div class="fill" style="width: 70%;"></div>
+                                                    <div class="fill" style="width: 55%;"></div>
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li style="border: none; padding-bottom: 5px !important;">
                                             <div class="progress">
-                                                <a>Microcontrollers</a>
+                                                <a>Python</a>
                                                 <div class="progressbar">
-                                                    <div class="fill" style="width: 40%;"></div>
+                                                    <div class="fill" style="width: 50%;"></div>
                                                 </div>
                                             </div>
                                         </li>
@@ -195,41 +194,29 @@
                             </div>
 
                             <div class="col col-r">
-                                <div class="title-row">
-                                    <p><strong>Personal</strong> Skills</p>
-                                </div>
-
                                 <div class="elem">
                                     <ul class="skill">
                                         <li>
                                             <div class="progress">
-                                                <a>Communication</a>
+                                                <a>MySQL / MySQLi / MongoDB</a>
                                                 <div class="progressbar">
-                                                    <div class="fill" style="width: 90%;"></div>
+                                                    <div class="fill" style="width: 40%;"></div>
                                                 </div>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="progress">
-                                                <a>Leadership</a>
+                                                <a>Mikrokontrolery</a>
                                                 <div class="progressbar">
-                                                    <div class="fill" style="width: 50%;"></div>
+                                                    <div class="fill" style="width: 40%;"></div>
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li style="border: none; padding-bottom: 5px !important;">
                                             <div class="progress">
-                                                <a>Team Work</a>
+                                                <a>C++</a>
                                                 <div class="progressbar">
-                                                    <div class="fill" style="width: 70%;"></div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="progress">
-                                                <a>English</a>
-                                                <div class="progressbar">
-                                                    <div class="fill" style="width: 65%;"></div>
+                                                    <div class="fill" style="width: 25%;"></div>
                                                 </div>
                                             </div>
                                         </li>
@@ -238,7 +225,6 @@
                             </div>
                         </div>
                     </div>
-                    -->
                 </div>
 
                 <div class="card photo">
@@ -246,7 +232,7 @@
                 </div>
             </div>
 
-            <div class="cards" id="portfolio">
+            <div class="cards" id="portfolio" style="z-index: 4;">
                 <div class="card text">
                     <h1 class="card-title">PORTFOLIO</h1>
 
@@ -271,7 +257,7 @@
                             </div>
     
                             <div class="col col-r">
-                                <div class="elem" id="ciri" onclick="window.open('http://ciri.ct8.pl/blog', '_blank')">
+                                <div class="elem" id="ciri">
                                     <div class="img">
                                         <img src="images/photos/obroza.jpg" alt="">
                                         <span class="img-color"></span>
@@ -361,13 +347,14 @@
     <div id="project-info">
         <div class="content">
             <span id="close"><img src="images/icons/close.svg" alt=""></span>
-            <img src="images/photos/tasklist.png" alt="">
+            <img id="project-image" alt="">
             <p id="title"></p>
 
             <p id="description"></p>
 
             <p id="tech"></p>
 
+            <p class="links-header">Dodatkowe linki</p>
             <p id="links"></p>
         </div>
     </div>

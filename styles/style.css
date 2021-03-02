@@ -275,7 +275,7 @@ input:focus, textarea:focus {
   margin-top: 25px;
 }
 
-#page #cards-container #about .buttons .github-button {
+#page #cards-container #about .buttons .button {
   background: rgba(0, 0, 0, 0.05);
   border-radius: 25px;
   -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
@@ -289,32 +289,32 @@ input:focus, textarea:focus {
   transition: 0.5s;
 }
 
-#page #cards-container #about .buttons .github-button div {
+#page #cards-container #about .buttons .button div {
   padding: 7px 10px !important;
 }
 
-#page #cards-container #about .buttons .github-button div img {
+#page #cards-container #about .buttons .button div img {
   float: left;
 }
 
-#page #cards-container #about .buttons .github-button div p {
+#page #cards-container #about .buttons .button div p {
   font-size: 20px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-#page #cards-container #about .buttons .github-button:hover {
+#page #cards-container #about .buttons .button:hover {
   background: rgba(255, 255, 255, 0.05);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-#page #cards-container #about .buttons .github-button:hover img {
+#page #cards-container #about .buttons .button:hover img {
   -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(214deg) brightness(102%) contrast(104%);
           filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(214deg) brightness(102%) contrast(104%);
 }
 
-#page #cards-container #about .buttons .github-button:hover p {
+#page #cards-container #about .buttons .button:hover p {
   color: white;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -349,11 +349,7 @@ input:focus, textarea:focus {
 }
 
 #page #cards-container #resume .skills-container {
-  margin-top: 40px;
-}
-
-#page #cards-container #resume .skills-container .row-2 .col .elem {
-  padding-bottom: 20px !important;
+  margin-top: 1px;
 }
 
 #page #cards-container #resume .skills-container .row-2 .col .elem .skill li {
@@ -651,14 +647,45 @@ input:focus, textarea:focus {
   padding: 3px 7px !important;
 }
 
-#project-info .content #links {
-  font-size: 15px;
-  font-weight: 300;
+#project-info .content .links-header {
+  color: white;
+  font-size: 20px;
   margin-top: 20px;
 }
 
-#project-info .content #links:hover {
-  color: red;
+#project-info .content #links {
+  margin-top: 5px;
+}
+
+#project-info .content #links a {
+  border: 3px solid black;
+  border-radius: 20px;
+  font-weight: 500;
+  padding: 2px 10px !important;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#project-info .content #links a.yt-link {
+  background: red;
+  color: white;
+}
+
+#project-info .content #links a.yt-link:hover {
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#project-info .content #links a.ciri-link {
+  background: #ff7a18;
+  color: white;
+}
+
+#project-info .content #links a.ciri-link:hover {
+  background: #319197;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 ::-webkit-scrollbar {
